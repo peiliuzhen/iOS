@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic,strong)UILabel *label;
 @end
 
 @implementation ViewController
@@ -21,9 +21,25 @@
     
     self.title=@"测试";
     
+    [self.view addSubview: self.label];
+    
     NSLog(@"github");
 }
 
+-(UILabel *)label{
+    
+    if (!_label) {
+        
+        _label=[[UILabel alloc]initWithFrame:CGRectMake(100, 200, 200, 50)];
+        
+        _label.text=@"github";
+        
+        _label.textAlignment=NSTextAlignmentCenter;
+        
+        _label.backgroundColor=[UIColor whiteColor];
+    }
+    return _label;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
