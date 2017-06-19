@@ -24,6 +24,7 @@
     [self.view addSubview: self.label];
     
     NSLog(@"github");
+    
 }
 
 -(UILabel *)label{
